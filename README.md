@@ -27,10 +27,10 @@ To execute `pocf_bandit_unif_guass.py`, run the following:
 
 # <MODEL_NAME> 
 Allows the user to run only a single utility model. Utility generation models supported (pass model string):
-- 'uniform'             : uniform $v_{i,j} in [-1,1]$.
-- 'gaussian'            : base \$mu_{i,j} \sim U(-1,1), v \sim N(mu, sd)$ where $sd$ depends on $mu$.
+- 'uniform'             : uniform $v_{i,j} \in [-1,1]$.
+- 'gaussian'            : base $\mu_{i,j} \sim U(-1,1), v \sim N(\mu, \sigma^2)$ where $\sigma^2$ depends on $\mu$.
 - 'size_uniform'        : $x \sim U(-1,1), v = x * size / (n+1)$
-- 'size_gaussian'       : $mu \sim U(-1,1), x \sim N(mu, sd), v = x * size / (n+1)$
+- 'size_gaussian'       : $\mu \sim U(-1,1), x \sim N(\mu, \sigma^2), v = x * size / (n+1)$
 
 # <POLICY_NAME>
 Generate $M$ samples (joint actions and semi-bandit reports) under exploration policy:
